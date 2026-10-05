@@ -4,6 +4,7 @@
 
 
 # This script should only be run if the current directory is the root file.
+# i.e. ros_ws
 colcon build --symlink-install
 
 source /opt/ros/humble/setup.bash
