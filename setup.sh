@@ -1,4 +1,8 @@
-# run the to set up the workspace automatically.
+# Download docker before doing anything else. you will also need the desktop version of
+# foxglove bridge.
+
+# run this to set up the workspace automatically.
+
 mkdir -p ros_ws/src
 cd ros_ws/src
 
@@ -11,6 +15,8 @@ git clone https://github.com/Blue474/rm_gimbal_description
 git clone https://github.com/Blue474/rm_serial_driver
 git clone https://github.com/Blue474/rm_vision
 git clone https://github.com/Blue474/rm_auto_record
+
+docker pull ghcr.io/fateryu/rm_vision:latest # comment out if you already have this downloaded
 
 #apt-get update
 #rosdep install --from-paths src --ignore-src -r -y
