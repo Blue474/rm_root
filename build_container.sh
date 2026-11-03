@@ -3,8 +3,12 @@
 # the web version doesnt seem to work for some reason. the command line outputs will
 # tell you the correct port.
 
+# CRUCIAL NOTE: ghcr.io/blue474/rm_vision:latest needs to have the username replaced with
+# your username and repo name to actually pull from your image. The image is only generated
+# if you enable jobs on your repo and when you push to main.
+
 docker run -it --name rv_devel \
 --privileged --network host \
 -v /dev:/dev -v $HOME/.ros:/root/.ros -v ws:/ros_ws \
-ghcr.io/fateryu/rm_vision:latest \
+ghcr.io/blue474/rm_vision:latest \
 ros2 launch foxglove_bridge foxglove_bridge_launch.xml
