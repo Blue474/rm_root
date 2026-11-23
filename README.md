@@ -9,7 +9,7 @@ Root directory for each rm project. Contains build tools, set up scripts, etc.
 1. make the telemetry data accessible
 When you are done building your docker container, modify the following command so that the host directory points the folder
 that contains your test data and then run it. This command should make it so that the test programs will be able to access the test data.
-docker run -d -v /absolute/path/on/host:/ image_name
+docker run -d -v /absolute/path/on/host:/:ro image_name
 
 
 # Deleting Docker containers
