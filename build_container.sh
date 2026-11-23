@@ -16,3 +16,11 @@ docker run -it --name rv_devel \
 -v ~/TestData:/ros_ws/TestData:ro \
 ghcr.io/blue474/rm_vision:latest \
 ros2 launch foxglove_bridge foxglove_bridge_launch.xml
+
+
+docker run -it --name rv_runtime \
+--privileged --network host --restart always \
+-v /dev:/dev -v $HOME/.ros:/root/.ros -v ws:/ros_ws \
+-v ~/TestData:/ros_ws/TestData:ro \
+ghcr.io/blue474/rm_vision:latest \
+ros2 launch rm_vision_bringup no_hardware.launch.py
